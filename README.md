@@ -12,6 +12,14 @@ This tool combines two powerful concepts:
 
 It turns out that what helps kids navigate transitions also helps neurodivergent adults (and really, all adults) overcome procrastination!
 
+## Demo
+
+![Demo](demo.gif)
+
+The tool provides two modes:
+- **Quick Snack Mode** (`snack`) - Instant encouragement with random ASCII art
+- **Guide Mode** (`snack guide`) - Interactive 5-step process to overcome procrastination
+
 ## What is a Transition Snack?
 
 A transition snack is a small, pleasant ritual that creates a mental break between activities, provides comfort during context switches, and acknowledges the difficulty of transitioning.
@@ -35,17 +43,48 @@ Run `snack guide` for a full 5-step procrastination-breaking process:
 
 ## Installation
 
+### Pre-built Binaries (Recommended)
+
+Download the latest release for your platform from the [Releases page](https://github.com/yourusername/transition-snack/releases):
+
+- **Linux (x86_64)**: `snack-linux-x86_64.tar.gz`
+- **macOS (Intel)**: `snack-macos-x86_64.tar.gz`
+- **macOS (Apple Silicon)**: `snack-macos-aarch64.tar.gz`
+- **Windows (x86_64)**: `snack-windows-x86_64.zip`
+
+All binaries are built with locked dependency versions for reproducibility and security.
+
+#### Linux/macOS:
+```bash
+# Extract the archive
+tar -xzf snack-*.tar.gz
+
+# Move to a directory in your PATH
+sudo mv snack /usr/local/bin/
+
+# Make it executable (if needed)
+chmod +x /usr/local/bin/snack
+```
+
+#### Windows:
+```powershell
+# Extract the ZIP file and move snack.exe to a directory in your PATH
+# Or run it directly from the extracted location
+```
+
 ### From Source
+
+If you prefer to build from source or the pre-built binaries don't work for your platform:
 
 ```bash
 # Clone or navigate to the repository
 cd transition-snack
 
-# Build the project
-cargo build --release
+# Build the project (use --locked to match exact dependency versions)
+cargo build --release --locked
 
 # Install globally (optional)
-cargo install --path .
+cargo install --path . --locked
 
 # Or run directly
 cargo run
