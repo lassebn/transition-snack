@@ -1,0 +1,19 @@
+[package]
+name = "snack"
+version = "0.1.0"
+edition = "2021"
+authors = ["Lasse Benn Nørregaard <lassenorregaard@gmail.com>"]
+description = "A transition helper CLI for neurodivergent folks - ease transitions and overcome procrastination with quirky encouragement"
+readme = "README.md"
+repository = "https://github.com/lassebn/transition-snack"
+license = "MIT"
+keywords = ["cli", "productivity", "mental-health", "neurodivergent", "transition"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+inquire = "0.7"
+colored = "2.1"
+rand = "0.8"
