@@ -45,7 +45,7 @@ Run `snack guide` for a full 5-step procrastination-breaking process:
 
 ### Pre-built Binaries (Recommended)
 
-Download the latest release for your platform from the [Releases page](https://github.com/yourusername/transition-snack/releases):
+Download the latest release for your platform from the [Releases page](https://github.com/lassebn/transition-snack/releases):
 
 - **Linux (x86_64)**: `snack-linux-x86_64.tar.gz`
 - **macOS (Intel)**: `snack-macos-x86_64.tar.gz`
