@@ -20,6 +20,9 @@ jobs:
           - target: x86_64-unknown-linux-gnu
             os: ubuntu-latest
             name: snack-linux-x86_64.tar.gz
+          - target: x86_64-unknown-linux-musl
+            os: ubuntu-latest
+            name: snack-linux-x86_64-musl.tar.gz
           - target: x86_64-apple-darwin
             os: macos-latest
             name: snack-macos-x86_64.tar.gz
@@ -32,6 +35,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install musl-tools (for static Linux builds)
+        if: matrix.target == 'x86_64-unknown-linux-musl'
+        run: sudo apt-get update && sudo apt-get install -y musl-tools
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable

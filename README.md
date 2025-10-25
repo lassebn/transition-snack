@@ -48,11 +48,14 @@ Run `snack guide` for a full 5-step procrastination-breaking process:
 Download the latest release for your platform from the [Releases page](https://github.com/lassebn/transition-snack/releases):
 
 - **Linux (x86_64)**: `snack-linux-x86_64.tar.gz`
+- **Linux (x86_64, static - for NixOS)**: `snack-linux-x86_64-musl.tar.gz`
 - **macOS (Intel)**: `snack-macos-x86_64.tar.gz`
 - **macOS (Apple Silicon)**: `snack-macos-aarch64.tar.gz`
 - **Windows (x86_64)**: `snack-windows-x86_64.zip`
 
 All binaries are built with locked dependency versions for reproducibility and security.
+
+**Note for NixOS users**: Use the `snack-linux-x86_64-musl.tar.gz` variant, which is statically linked and works on NixOS without issues.
 
 #### Linux/macOS:
 ```bash
